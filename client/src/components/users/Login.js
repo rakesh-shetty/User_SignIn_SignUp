@@ -33,9 +33,7 @@ class Login extends React.Component {
                     const { token } = response.data
                     if (token) {
                         localStorage.setItem("authToken", token)
-                        window.alert("Hello!!\nYou have logged In")
-                        this.props.history.push('/users/login')
-                        window.location.reload()
+                        alert('You have succesfully logged in')
                     }
 
                 }
@@ -58,7 +56,6 @@ class Login extends React.Component {
                         <input placeholder="Password" className="form-control" type="password" id="password" name="password" value={this.state.password} onChange={this.handleChange} />
                     </div>
                     <input className="btn btn-primary" type="submit" value="Login" />
-
                 </form>
             </div>
         )
